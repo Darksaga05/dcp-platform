@@ -13,6 +13,7 @@ func main() {
 	appConfig := config.LoadConfig()
 
 	http.HandleFunc("/health", handlers.HealthCheck)
+	http.HandleFunc("/user", handlers.GetUser)
 
 	fmt.Println(appConfig.AppName + " server started on port " + appConfig.ServerPort)
 
