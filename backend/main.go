@@ -3,16 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
-)
 
-func healthCheck(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintln(w, "DCP Backend is running")
-}
+	"github.com/dcp-project/backend/internal/handlers"
+)
 
 func main() {
 
-	http.HandleFunc("/health", healthCheck)
+	http.HandleFunc("/health", handlers.HealthCheck)
 
 	fmt.Println("DCP Backend server started on port 8080")
 
