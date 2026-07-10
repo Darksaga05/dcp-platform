@@ -1,0 +1,44 @@
+# DCP Database Design
+
+## Main Tables
+
+### Users
+- id
+- username
+- callsign
+- email
+- password_hash
+- avatar
+- created_at
+
+### Devices
+- id
+- user_id
+- device_name
+- platform
+- app_version
+
+### Talk Groups
+- id
+- name
+- description
+
+### Messages
+- id
+- sender_id
+- group_id
+- message
+- created_at
+
+### Voice Sessions
+- id
+- user_id
+- protocol
+- duration
+- started_at
+
+### Protocols
+- id
+- name
+- version
+- plugin
