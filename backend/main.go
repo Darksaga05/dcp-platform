@@ -15,6 +15,7 @@ func main() {
 	http.HandleFunc("/health", handlers.HealthCheck)
 	http.HandleFunc("/user", handlers.GetUser)
 	http.HandleFunc("/messages", handlers.GetMessages)
+	http.HandleFunc("/conversations", handlers.GetConversations)
 	
 	fmt.Println(appConfig.AppName + " server started on port " + appConfig.ServerPort)
 
