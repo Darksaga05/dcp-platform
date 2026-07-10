@@ -4,16 +4,19 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/dcp-project/backend/internal/config"
 	"github.com/dcp-project/backend/internal/handlers"
 )
 
 func main() {
 
+	appConfig := config.LoadConfig()
+
 	http.HandleFunc("/health", handlers.HealthCheck)
 
-	fmt.Println("DCP Backend server started on port 8080")
+	fmt.Println(appConfig.AppName + " server started on port " + appConfig.ServerPort)
 
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":"+appConfig.ServerPort, nil)
 
 	if err != nil {
 		panic(err)
