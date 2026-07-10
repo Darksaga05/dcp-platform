@@ -25,3 +25,14 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(response)
 }
+func Login(w http.ResponseWriter, r *http.Request) {
+
+	response := map[string]string{
+		"message": "Login endpoint ready",
+		"token":   "jwt_token_here",
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+
+	json.NewEncoder(w).Encode(response)
+}
