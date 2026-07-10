@@ -16,6 +16,7 @@ func main() {
 	http.HandleFunc("/user", handlers.GetUser)
 	http.HandleFunc("/messages", handlers.GetMessages)
 	http.HandleFunc("/conversations", handlers.GetConversations)
+	http.HandleFunc("/media", handlers.GetMedia)
 	
 	fmt.Println(appConfig.AppName + " server started on port " + appConfig.ServerPort)
 
