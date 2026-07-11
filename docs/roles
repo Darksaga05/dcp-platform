@@ -1,0 +1,76 @@
+# DCP User Roles
+
+## Overview
+
+DCP role-based access control (RBAC) model defines permissions for every user in the platform.
+
+---
+
+# 1. Super Admin
+
+## Permissions
+
+- Manage entire platform
+- Create organizations
+- Delete organizations
+- View all logs
+- Manage licenses
+- System configuration
+- Global security settings
+
+---
+
+# 2. Organization Admin
+
+## Permissions
+
+- Manage organization
+- Invite users
+- Remove users
+- Create departments
+- Create groups
+- Assign moderators
+- View organization analytics
+
+---
+
+# 3. Moderator
+
+## Permissions
+
+- Manage channels
+- Manage groups
+- Remove inappropriate messages
+- Manage members
+- Report security issues
+
+---
+
+# 4. Employee (User)
+
+## Permissions
+
+- Send messages
+- Create chats
+- Join groups
+- Share files
+- Use AI Assistant
+- Make voice calls
+- Make video calls
+
+---
+
+# 5. Guest
+
+## Permissions
+
+- Limited access
+- Read-only channels
+- Temporary invitations
+- No administration rights
+
+---
+
+## Security Principle
+
+Every role only receives the permissions required for its responsibilities.
